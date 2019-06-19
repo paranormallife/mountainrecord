@@ -1,0 +1,65 @@
+/*----------------------------------------------------------------------------------------
+
+TABLE OF CONTENTS:
+1. General
+2. Media Queries
+
+----------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------
+1. General
+----------------------------------------------------------------------------------------*/
+
+.thmlv-widget-type-team {
+	display: inline-block;
+	*display: inline;
+	margin-bottom: 40px;
+	margin-left: 2%;
+	text-align: center;
+	vertical-align: top;
+	width: 23.5%;
+	zoom: 1;
+}
+
+.thmlv-widget-type-team:nth-of-type(4n+1) {
+	margin-left: 0;
+}
+
+.thmlv-widget-type-team a {
+	border-bottom: 0px;
+}
+
+.thmlv-widget-type-team h1 {
+	font-size: 1.5em;
+	line-height: 1.1em;
+	text-align: center;
+}
+
+.thmlv-widget-type-team img {
+	display: block;
+}
+
+/*----------------------------------------------------------------------------------------
+2. Media Queries
+----------------------------------------------------------------------------------------*/
+
+@media ( max-width : 800px ) {
+	.thmlv-widget-type-team {
+		width: 49.0%;
+	}
+	
+	.thmlv-widget-type-team:nth-child(odd) {
+		margin-left: 0;
+	}
+}
+
+@media ( max-width : 400px ) {
+	.thmlv-widget-type-team {
+		width: 100%;
+		margin-left: 0;
+	}
+	
+	.thmlv-widget-type-team h1 {
+		font-size: 1.4rem;
+	}
+}

@@ -1,0 +1,192 @@
+/*----------------------------------------------------------------------------------------
+
+TABLE OF CONTENTS:
+1. Media Queries
+
+----------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------
+1. Media Queries
+----------------------------------------------------------------------------------------*/
+
+@media (max-width : 1920px) {
+	.thmlvSelectedSwitch {
+		font-size: 2.25em;
+	}
+}
+
+@media (max-width : 1600px) {
+	.thmlvSelectedSwitch {
+		font-size: 2em;
+	}
+}
+
+@media (max-width : 1440px) {
+	.thmlvSelectedSwitch {
+		font-size: 1.75em;
+	}
+}
+
+@media (max-width : 1280px) {
+	body {
+		font-size: 15px;
+	}
+	
+	.thmlvMasonryTitle {
+		bottom: 2.5em;
+		left: 2.5em;
+	}
+	
+	.thmlvSelectedSwitch {
+		font-size: 1.5em;
+	}
+}
+
+@media (max-width : 1024px) {
+	body {
+		font-size: 14px;
+	}
+	
+	.thmlvMasonryTitle {
+		bottom: 2em;
+		left: 2em;
+	}
+	
+	#thmlvVideoWrap video {
+		display: none;
+	}
+}
+
+@media (max-width : 1080px) {
+
+	#thmlvCommentsWrap,
+	#thmlvContent:not(.thmlvSelectedContent),
+	#thmlvFooter,
+	.thmlvNextPostLink .container,
+	.type-post {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+}
+
+@media (max-width : 768px) {
+	
+	#thmlvFooter .span_6,
+	#thmlvFooter .span_6:last-of-type {
+		text-align: center;
+	}
+	
+	#thmlvHeaderMenu {
+		display: none;
+	}
+	
+	#thmlvLogo {
+    	margin-left: 2em;
+    }
+	
+	#thmlvLogo img {
+		max-width: 90%;
+	}
+	
+	.thmlvMasonryTitle h1 {
+		font-size: 1.75em;
+	}
+	
+	#thmlvMenuIcon {
+		margin-top: 0;
+		top: 0;
+	}
+	
+	#thmlvMenuWrap {
+		margin-right: 1em;
+		top: 1em;
+	}
+	
+	#thmlvMenuWrap.thmlvDesktopMenu #thmlvMenuIcon {
+		display: block;
+	}
+	
+	#thmlvMobileMenuScroll {
+		padding-left: 4em;
+		padding-right: 4em;
+	}
+	
+	#thmlvMobileMenuWrap a {
+		font-size: 1.5em;
+		line-height: 2em;
+	}
+	
+	.thmlvSectionCategories {
+		font-size: 0.625em;
+	}
+}
+
+@media (max-width : 660px) {
+	.comment-form #comment {
+		height: 70px;
+		height: 5rem;
+	}
+}
+
+@media (max-width : 600px) {
+	.thmlvClassicPost,
+	.thmlvListPost {
+		margin-bottom: 4em;
+		padding-bottom: 4em;
+	}
+
+	.thmlvClassicPost .avatar,
+	.thmlvListPost .avatar {
+		display: none;
+	}
+
+	.thmlvClassicPost header,
+	.thmlvListPost header {
+		margin-left: 0;
+	}
+	
+	.thmlvClassicPost header h1,
+	.thmlvListPost header h1 {
+		font-size: 3em;
+	}
+	
+	.thmlvClassicPost.sticky header h1,
+	.thmlvListPost.sticky header h1 {
+		font-size: 4em;
+	}
+
+	#thmlvLogo h1 {
+		font-size: 1.5em;
+	}
+
+	#thmlvLogo img {
+		max-width: 60%;
+	}
+	
+	.thmlvMasonryTitle h1 {
+		font-size: 1.5em;
+	}
+	
+	#thmlvMenuWrap {
+		margin-right: 0.5em;
+		top: 0.5em;
+	}
+	
+	#thmlvMobileMenuScroll {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+	
+	#thmlvMobileMenuWrap a {
+		font-size: 1.25em;
+	}
+
+	#thmlvSelectedBackgrounds,
+	#thmlvSelectedTitles {
+		display: none;
+	}
+	
+	#thmlvSectionTitle h3 {
+    	font-size: 2.5em;
+    }
+}

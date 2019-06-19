@@ -1,0 +1,271 @@
+.mwl-img {
+  cursor: zoom-in;
+}
+.custom-link .mwl-img {
+  cursor: pointer;
+}
+.mwl-preload-image {
+  position: fixed;
+  left: 300%;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+}
+.mwl-preload-image img {
+  height: 80%;
+}
+#mwl-map a[href^="http://maps.google.com/maps"] {
+  display: none !important;
+}
+#mwl-map a[href^="https://maps.google.com/maps"] {
+  display: none !important;
+}
+#mwl-map .gmnoprint a,
+.gmnoprint span,
+.gm-style-cc {
+  display: none;
+}
+#mwl-map .gmnoprint div {
+  background: none !important;
+}
+#mwl-target .mwl-fullpage-container {
+  position: fixed;
+  visibility: visible;
+  opacity: 1;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.9);
+}
+#mwl-target .mwl-fullpage-container.invisible {
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
+}
+#mwl-target .mwl-fullpage-container .controls-container {
+  position: relative;
+  z-index: 999;
+  height: 40px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+#mwl-target .mwl-fullpage-container .controls-container .mwl-control {
+  cursor: pointer;
+  margin-left: 10px;
+}
+#mwl-target .mwl-fullpage-container .controls-container .mwl-control.right {
+  float: right;
+}
+#mwl-target .mwl-fullpage-container .controls-container .mwl-control svg {
+  height: 30px;
+  margin-top: 5px;
+  fill: white;
+}
+#mwl-target .mwl-fullpage-container .controls-container .mwl-control svg path {
+  fill: white;
+}
+#mwl-target .mwl-fullpage-container .controls-container .mwl-control.control-expand svg,
+#mwl-target .mwl-fullpage-container .controls-container .mwl-control.control-shrink svg {
+  height: 26px;
+  margin-top: 7px;
+}
+#mwl-target .mwl-fullpage-container .controls-container .mwl-control.control-shrink {
+  display: none;
+}
+#mwl-target .mwl-fullpage-container .controls-container .mwl-control.control-show-map,
+#mwl-target .mwl-fullpage-container .controls-container .mwl-control.control-hide-map {
+  display: none;
+}
+#mwl-target .mwl-fullpage-container .controls-container .mwl-control.control-show-map svg,
+#mwl-target .mwl-fullpage-container .controls-container .mwl-control.control-hide-map svg {
+  margin: 0;
+  height: 26px;
+  margin-top: 7px;
+}
+#mwl-target .mwl-fullpage-container .image-container {
+  position: relative;
+  display: flex;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 1;
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#mwl-target .mwl-fullpage-container .image-container .low-res-img {
+  position: absolute;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 1;
+}
+#mwl-target .mwl-fullpage-container .image-container .low-res-img.landscape {
+  height: 100%;
+}
+#mwl-target .mwl-fullpage-container .image-container .low-res-img.portrait {
+  height: 100%;
+}
+#mwl-target .mwl-fullpage-container .image-container .loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;utf8,<svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#fff"><g fill="none" fill-rule="evenodd"><g transform="translate(1 1)" stroke-width="2"><circle stroke-opacity=".5" cx="18" cy="18" r="18"/><path d="M36 18c0-9.94-8.06-18-18-18"><animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite"/></path></g></g></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#mwl-target .mwl-fullpage-container .image-container .high-res-img {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 0;
+  transform: scale(1);
+}
+#mwl-target .mwl-fullpage-container .image-container.full-res-loaded .low-res-img {
+  opacity: 0;
+  transition: .3s;
+  transition-delay: .3s;
+}
+#mwl-target .mwl-fullpage-container .image-container.full-res-loaded .loader {
+  opacity: 0;
+}
+#mwl-target .mwl-fullpage-container .image-container.full-res-loaded .high-res-img {
+  opacity: 1;
+  transform: scale(1);
+}
+#mwl-target .mwl-fullpage-container .image-container .control-navigation-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+}
+#mwl-target .mwl-fullpage-container .image-container .control-navigation-container.prev {
+  left: 0;
+}
+#mwl-target .mwl-fullpage-container .image-container .control-navigation-container.next {
+  right: 0;
+}
+#mwl-target .mwl-fullpage-container .image-container .control-navigation-container svg {
+  height: 50px;
+  fill: white;
+  cursor: pointer;
+}
+#mwl-target .mwl-fullpage-container .image-info-container {
+  display: flex;
+  color: white !important;
+  padding: 20px;
+  justify-content: center;
+}
+#mwl-target .mwl-fullpage-container .image-info-container:empty {
+  display: none;
+}
+#mwl-target .mwl-fullpage-container .image-info-container .content {
+  text-align: center;
+}
+#mwl-target .mwl-fullpage-container .image-info-container .content h2 {
+  margin: 0;
+  color: white !important;
+}
+#mwl-target .mwl-fullpage-container .image-info-container .content p {
+  color: white !important;
+  margin: 0;
+}
+#mwl-target .mwl-fullpage-container .image-info-container .content .image-exifs .image-exif {
+  display: inline-block;
+  font-size: 14px;
+  font-family: sans-serif;
+  vertical-align: bottom;
+  margin: 0 5px;
+}
+#mwl-target .mwl-fullpage-container .image-info-container .content .image-exifs .image-exif svg {
+  height: 14px;
+  width: 18px;
+  fill: white;
+  vertical-align: middle;
+}
+#mwl-target .mwl-fullpage-container .image-info-container .content .image-exifs .image-exif svg path {
+  fill: white;
+}
+#mwl-target .mwl-fullpage-container .image-info-container .content .image-exifs .image-exif span {
+  vertical-align: middle;
+}
+@media screen and (max-width: 660px) {
+  #mwl-target .mwl-fullpage-container .controls-container {
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+  }
+  #mwl-target .mwl-fullpage-container .image-info-container {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 660px) {
+  #mwl-target .mwl-fullpage-container[data-orientation="portrait"] {
+    flex-direction: row;
+    flex-flow: row wrap;
+  }
+  #mwl-target .mwl-fullpage-container[data-orientation="portrait"] .controls-container {
+    position: absolute;
+    z-index: 9;
+    flex-shrink: 0;
+    width: 100%;
+  }
+  #mwl-target .mwl-fullpage-container[data-orientation="portrait"] .image-container {
+    display: inline-flex;
+    width: 50%;
+  }
+  #mwl-target .mwl-fullpage-container[data-orientation="portrait"] .image-info-container {
+    display: inline-flex;
+    padding: 0;
+    width: 50%;
+    align-items: center;
+  }
+  #mwl-target .mwl-fullpage-container[data-orientation="portrait"] .image-info-container .content {
+    text-align: left;
+    width: 80%;
+  }
+}
+#mwl-target .mwl-fullpage-container.expanded .controls-container .control-expand {
+  display: none;
+}
+#mwl-target .mwl-fullpage-container.expanded .controls-container .control-shrink {
+  display: block;
+}
+#mwl-target .mwl-fullpage-container.expanded .image-info-container {
+  display: none !important;
+}
+#mwl-target .mwl-fullpage-container[data-theme="light"] {
+  background: rgba(255, 255, 255, 0.9);
+}
+#mwl-target .mwl-fullpage-container[data-theme="light"] .controls-container .mwl-control svg path {
+  fill: black;
+}
+#mwl-target .mwl-fullpage-container[data-theme="light"] .image-container .control-navigation-container svg path {
+  fill: black;
+}
+#mwl-target .mwl-fullpage-container[data-theme="light"] .image-info-container {
+  color: black !important;
+}
+#mwl-target .mwl-fullpage-container[data-theme="light"] .image-info-container .content h2 {
+  color: black !important;
+}
+#mwl-target .mwl-fullpage-container[data-theme="light"] .image-info-container .content p {
+  color: black !important;
+}
+#mwl-target .mwl-fullpage-container[data-theme="light"] .image-info-container .content .image-exifs .image-exif svg path {
+  fill: black;
+}

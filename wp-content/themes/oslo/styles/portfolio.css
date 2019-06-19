@@ -1,0 +1,269 @@
+/*----------------------------------------------------------------------------------------
+
+TABLE OF CONTENTS:
+1. General
+2. Links
+3. Lists
+4. Typo
+5. Stuff
+6. Media Queries
+
+----------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------
+1. General
+----------------------------------------------------------------------------------------*/
+
+.page-template-thmlv-page-portfolio {
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.page-template-thmlv-page-portfolio footer {
+	display: none;
+}
+
+.tax-skills #thmlvFooter {
+	margin-top: 0;
+}
+
+.thmlvIsotope {
+	opacity: 0;
+}
+
+.thmlvMasonryPortfolio {
+	display: block;
+	overflow: hidden;
+}
+
+.thmlvMasonryTitle {
+	color: #fff;
+	position: absolute;
+	left: 3em;
+    bottom: 3em;
+    z-index: 2;
+}
+
+.thmlvMasonryHover {
+	background-position: center center;
+    background-size: cover;
+    backface-visibility: hidden;
+    height: 100%;
+    -ms-transition: opacity .35s,-ms-transform .35s;
+    -moz-transition: opacity .35s,-moz-transform .35s;
+    -webkit-transition: opacity .35s,-webkit-transform .35s;
+    transition: opacity .35s,transform .35s;
+    -webkit-transform: translate3d(-50px,0,0);
+    -moz-transform: translate3d(-50px,0,0);
+    -ms-transform: translate3d(-50px,0,0);
+    -o-transform: translate3d(-50px,0,0);
+    transform: translate3d(-50px,0,0);
+    width: 100%;
+    width: -moz-calc(100% + 100px);
+    width: -webkit-calc(100% + 100px);
+    width: calc(100% + 100px);
+}
+
+.thmlvMasonryHoverWrap {
+	display: block;
+    height: 100%;
+    position: relative;
+}
+
+.thmlvMasonryPortfolio:hover .thmlvMasonryHover {
+	-webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.thmlvSelected {
+	background-position: center center;
+	background-size: cover;
+	left: 0;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+}
+
+.thmlvSelectedContent {
+	position: relative;
+	opacity: 0;
+	overflow-y: hidden;
+}
+
+#thmlvSelectedTitles {
+	position: absolute;
+	left: 3em;
+	bottom: 3em;
+}
+
+/*----------------------------------------------------------------------------------------
+2. Links
+----------------------------------------------------------------------------------------*/
+
+.thmlvMasonryTitle a {
+	color: #fff;
+}
+
+.thmlvSelectedSwitch {
+	font-size: 2.5em;
+	font-weight: 500;
+	line-height: 1.25;
+}
+
+#thmlvSelectedTitles:hover .thmlvSelectedSwitch:not(:hover) {
+	opacity: .5;
+}
+
+/*----------------------------------------------------------------------------------------
+3. Lists
+----------------------------------------------------------------------------------------*/
+
+#thmlvSelectedTitles ul {
+	list-style-type: none;
+	margin-bottom: 0;
+}
+
+/*----------------------------------------------------------------------------------------
+4. Typo
+----------------------------------------------------------------------------------------*/
+
+.thmlvMasonryTitle h1 {
+	color: #fff;
+	font-size: 2em;
+	font-weight: 500;
+	line-height: 1em;
+	margin-bottom: 0 !important;
+	margin-top: 0 !important;
+}
+
+/*----------------------------------------------------------------------------------------
+5. Stuff
+----------------------------------------------------------------------------------------*/
+
+.thmlvMasonryHoverWrap .thmlvMasonryShadows {
+	height: 100%;
+    display: block;
+}
+
+.thmlvMasonryHoverWrap:hover .thmlvMasonryShadows:after {
+    opacity: 1;
+    -webkit-transform: translate3d(0,-50px,0);
+    -moz-transform: translate3d(0,-50px,0);
+    -ms-transform: translate3d(0,-50px,0);
+    -o-transform: translate3d(0,-50px,0);
+    transform: translate3d(0,-50px,0);
+}
+
+.thmlvMasonryHoverWrap:hover .thmlvMasonryShadows:before {
+    opacity: 0;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.thmlvMasonryHoverWrap .thmlvMasonryShadows:after,
+.thmlvMasonryHoverWrap .thmlvMasonryShadows:before {
+	content: '';
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    top: 0;
+    -ms-transition: opacity .35s,-ms-transform .35s;
+    -moz-transition: opacity .35s,-moz-transform .35s;
+    -webkit-transition: opacity .35s,-webkit-transform .35s;
+    transition: opacity .35s,transform .35s;
+}
+
+.thmlvMasonryHoverWrap .thmlvMasonryShadows:after {
+	background: -webkit-linear-gradient(to bottom,rgba(30,30,30,.5) 0,rgba(30,30,30,0) 100%);
+    background: linear-gradient(to bottom,rgba(30,30,30,.5) 0,rgba(30,30,30,0) 100%);
+    content: '';
+	position: absolute;
+    z-index: 1;
+}
+
+.thmlvMasonryHoverWrap .thmlvMasonryShadows:before {
+	background: -webkit-linear-gradient(top,rgba(30,30,30,0) 0,rgba(30,30,30,.5) 90%);
+    background: linear-gradient(to bottom,rgba(30,30,30,0) 0,rgba(30,30,30,.5) 90%);
+    opacity: 1;
+	position: absolute;
+    -webkit-transform: translate3d(0,50%,0);
+    -moz-transform: translate3d(0,50%,0);
+    -ms-transform: translate3d(0,50%,0);
+    -o-transform: translate3d(0,50%,0);
+    transform: translate3d(0,50%,0);
+    z-index: 1;
+}
+
+.thmlvSectionCategories {
+	display: block;
+	font-size: 0.75em;
+    font-weight: 500;
+    letter-spacing: 0.1875em;
+    margin-top: 1em;
+    opacity: 0.7;
+    text-transform: uppercase;
+}
+
+.thmlvSelected video {
+    display: block;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/*----------------------------------------------------------------------------------------
+6. Media Queries
+----------------------------------------------------------------------------------------*/
+
+@media (min-aspect-ratio: 16/9) {
+	.thmlvSelected video {
+		height: 400%;
+		top: -150%;
+	}
+}
+
+@media (max-aspect-ratio: 16/9) {
+	.thmlvSelected video {
+  		left: -150%;
+    	width: 400%;
+	}
+}
+
+@media (min-width: 1024px) {
+	.thmlvMasonryPortfolio {
+		width: 25% !important;
+	}
+	
+	.thmlvMasonryPortfolio.thmlvMediumSize,
+	.thmlvMasonryPortfolio.thmlvBigSize {
+		width: 50% !important;
+	}
+}
+
+@media (min-width: 470px) and (max-width: 1024px) {
+	.thmlvMasonryPortfolio {
+		width: 50% !important;
+	}
+	
+	.thmlvMasonryPortfolio.thmlvMediumSize,
+	.thmlvMasonryPortfolio.thmlvBigSize {
+		width: 50%!important;
+	}
+}
+
+@media (max-width: 470px) {
+	.thmlvMasonryPortfolio,
+	.thmlvMasonryPortfolio.thmlvMediumSize,
+	.thmlvMasonryPortfolio.thmlvBigSize {
+		width: 100%;
+	}
+}

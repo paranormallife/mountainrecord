@@ -1,0 +1,348 @@
+/*----------------------------------------------------------------------------------------
+
+TABLE OF CONTENTS:
+1. General
+2. Forms
+3. Links
+4. Lists
+5. Typo
+6. Stuff
+
+----------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------
+1. General
+----------------------------------------------------------------------------------------*/
+
+body.pace-done #thmlvPostNavigation,
+body.pace-done .type-post {
+	-webkit-opacity: 1;
+	-khtml-opacity: 1;
+    -moz-opacity: 1;
+    -ms-opacity: 1;
+    -o-opacity: 1;
+    opacity: 1;
+    -webkit-transition: opacity 0.4s 0.5s linear;
+    -moz-transition: opacity 0.4s 0.5s linear;
+    -o-transition: opacity 0.4s 0.5s linear;
+    transition: opacity 0.4s 0.5s linear;
+}
+
+.comment-respond {
+    margin: 0 auto;
+    max-width: 680px;
+}
+
+.single-post #thmlvContent {
+	margin-bottom: 6em;
+}
+
+.single-post #thmlvFooter {
+	margin-top: 0;
+}
+
+#thmlvAuthor {
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	font-size: 0.75em;
+    font-weight: 500;
+    letter-spacing: 0.1875em;
+	margin-top: 6em;
+	padding-top: 2em;
+	text-align: center;
+	text-transform: uppercase;  
+}
+
+.thmlvClassicPost,
+.thmlvListPost {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 6em;
+    padding-bottom: 6em;
+}
+
+.thmlvClassicPost.sticky, .thmlvListPost.sticky {
+    border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+}
+
+.thmlvCommentContent {
+    margin-left: 6em;
+}
+
+#thmlvCommentsWrap {
+    background: none repeat scroll 0 0 rgba(0,0,0,0.06);
+    font-size: 0.875em;
+    padding-bottom: 6em;
+    padding-top: 4em;
+}
+
+.thmlvNextPostLink {
+	background: rgba(0, 0, 0, 0.09) none repeat scroll 0 0;
+	display: block;
+	opacity: 0;
+	padding-bottom: 6em;
+	padding-top: 6em;
+	position: relative;
+}
+
+.thmlvNextPostLink .container {
+	position: relative;
+	z-index: 2;
+}
+
+#thmlvNextLinkBgColor {
+	background: rgba(0, 0, 0, 0.09);
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#thmlvNextLinkBgImage {
+	background-size: cover;
+    background-position: center center;
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 100%;
+	left: 0;
+    transition: opacity .4s ease-in-out,-webkit-transform .4s ease-in-out;
+    transition: opacity .4s ease-in-out,transform .4s ease-in-out;
+    opacity: 0;
+    -webkit-transform: translate3d(0,0,12.5em);
+    transform: translate3d(0,0,12.5em);
+    top: 0;
+    width: 100%;
+    
+}
+
+.thmlvNextPostLink:hover #thmlvNextLinkBgImage {
+	opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+#thmlvPostNavigation {
+	margin-bottom: 2em;
+	-webkit-opacity: 0;
+    -khtml-opacity: 0;
+    -moz-opacity: 0;
+    -ms-opacity: 0;
+    -o-opacity: 0;
+    opacity: 0;
+}
+
+.type-post {
+	-webkit-opacity: 0;
+    -khtml-opacity: 0;
+    -moz-opacity: 0;
+    -ms-opacity: 0;
+    -o-opacity: 0;
+    opacity: 0;
+}
+
+/*----------------------------------------------------------------------------------------
+2. Forms
+----------------------------------------------------------------------------------------*/
+
+.comment-form #comment {
+	height: 50px;
+	height: 4rem;
+	-webkit-transition: all 300ms;
+	transition: all 300ms;
+}
+
+.comment-form #comment.form-open {
+  height: 150px;
+  height: 15rem;
+}
+
+/*----------------------------------------------------------------------------------------
+3. Links
+----------------------------------------------------------------------------------------*/
+
+.more-link {
+	border-bottom: 1px solid;
+	display: inline-block;
+	margin-top: 2em;
+}
+
+#thmlvAuthor a {
+	opacity: 0.7;
+}
+
+.thmlvClassicPost h1 a:hover,
+.thmlvListPost h1 a:hover {
+	opacity: .85;
+}
+
+.thmlvClassicPost p a {
+	border-bottom-style: solid;
+    border-width: 1px;
+}
+
+#thmlvPostNavigation li .thmlvNavNum {
+	border-radius: 50%;
+	display: block;
+	height: 2.25em;
+	line-height: 2.25em;
+    text-align: center;
+    width: 2.25em;
+}
+
+#thmlvPostNavigation li.active .thmlvNavNum {
+	border-width: 1px;
+	border-style: solid;
+}
+
+/*----------------------------------------------------------------------------------------
+4. Lists
+----------------------------------------------------------------------------------------*/
+
+.thmlvClassicPost header h1,
+.thmlvListPost header h1 {
+	font-size: 4em;
+    font-weight: 500;
+    line-height: 1em;
+    margin-bottom: 0;
+    margin-top: 0;
+    word-wrap: break-word;
+}
+
+.thmlvCommentList .comment {
+    list-style-type: none;
+    padding-bottom: 2em;
+}
+
+#thmlvPostNavigation li {
+	display: inline-block;
+	margin-right: 0.5em;
+}
+
+#thmlvPostNavigation li:last-of-type {
+	margin-right: 0;
+}
+
+/*----------------------------------------------------------------------------------------
+5. Typo
+----------------------------------------------------------------------------------------*/
+
+.thmlvClassicPost.sticky header h1, .thmlvListPost.sticky header h1 {
+	font-size: 6em;
+}
+
+#thmlvComments h1 {
+	color: #444444;
+    font-size: 1.625em;
+    font-weight: 500;
+    margin-bottom: 2em;
+}
+
+/*----------------------------------------------------------------------------------------
+6. Stuff
+----------------------------------------------------------------------------------------*/
+
+.thmlvClassicPost > a {
+	display: block;
+	margin-bottom: 3em;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 860px;
+}
+
+.author {
+	font-weight: 500;
+}
+
+.avatar {
+	border-radius: 50%;
+}
+
+.comment .avatar {
+	margin-right: 1.555em;
+}
+
+.comment .avatar,
+.thmlvClassicPost .avatar,
+.thmlvListPost .avatar {
+    float: left;
+}
+
+#thmlvAuthor img {
+	display: inline-block;
+	margin-right: 2em;
+	vertical-align: middle;
+}
+
+#thmlvAuthor time {
+	opacity: 0.7;
+}
+
+.thmlvAuthorMeta {
+    font-size: 1.25em;
+}
+
+.thmlvAuthorMeta .pubtime {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.thmlvAuthorMeta .pubtime,
+.thmlvEntryMeta,
+.thmlvNextPostLink #thmlvNextText {
+	font-size: 0.75em;
+	font-weight: 500;
+    letter-spacing: 0.1875em;
+    opacity: 0.7;
+    text-transform: uppercase;
+}
+
+.thmlvClassicPost .thmlvEntryMeta,
+.thmlvListPost .thmlvEntryMeta {
+	margin-top: 1em;
+}
+
+.thmlvClassicPost .thmlvEntryMeta {
+	margin-bottom: 3em;
+}
+
+.thmlvClassicPost header,
+.thmlvListPost header {
+	margin-left: 90px;
+}
+
+.thmlvEntryMeta {
+	margin-top: 1em;
+}
+
+.thmlvEntryMeta,
+.thmlvNextPostLink #thmlvNextText {
+	display: block;
+}
+
+.thmlvNextPostLink #thmlvNextText {
+	transition: opacity .6s ease-in-out,-webkit-transform .6s ease-in-out;
+    transition: opacity .6s ease-in-out,transform .6s ease-in-out;
+    -webkit-transform: translate3d(0,0,12.5em);
+    transform: translate3d(0,0,12.5em);
+}
+
+.thmlvNextPostLink:hover #thmlvNextText {
+	opacity: 0;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.thmlvNextPostLink #thmlvNextTitle {
+	font-size: 2em;
+	font-weight: 500;
+	transition: opacity .6s ease-in-out,-webkit-transform .6s ease-in-out;
+    transition: opacity .6s ease-in-out,transform .6s ease-in-out;
+    -webkit-transform: translate3d(0,0,12.5em);
+    transform: translate3d(0,0,12.5em);
+}
+
+.thmlvNextPostLink:hover #thmlvNextTitle {
+	opacity: 0;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}

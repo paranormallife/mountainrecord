@@ -1,0 +1,9 @@
+/*-----------------------------------------------------------------------------------
+Admin styles
+-----------------------------------------------------------------------------------*/
+
+.post-type-portfolio .cmb2-id--oslo-subtitle,
+.post-type-post .cmb2-id--oslo-subtitle,
+.post-type-team .cmb2-id--oslo-subtitle {
+	display: none;
+}

@@ -167,6 +167,28 @@ function oslo_slug_widgets_init() {
 			'before_title' => '<h4 class="thmlvWidgetTitle">',
 			'after_title' => '</h4>',
 		));
+	
+		register_sidebar(array(
+			'name' => 'Homepage Post Tiles',
+			'id' => 'homepage-post-tiles',
+			'description'   => esc_html__('Tiled Feature of Selected Posts on Homepage', 'oslo'),
+			'class' => '',
+			'before_widget' => '<div id="post-tiles">',
+			'after_widget' => '</div>',
+			'before_title' => '<h4 style="display: none;">',
+			'after_title' => '</h4>',
+		));
+	
+		register_sidebar(array(
+			'name' => 'Homepage Featured Posts',
+			'id' => 'homepage-featured-posts',
+			'description'   => esc_html__('Columns of Featured Posts on Homepage', 'oslo'),
+			'class' => '',
+			'before_widget' => '<div id="homepage-featured-posts">',
+			'after_widget' => '</div>',
+			'before_title' => '<h4 style="display: none;">',
+			'after_title' => '</h4>',
+		));
 	}
 }
 add_action('widgets_init', 'oslo_slug_widgets_init');
@@ -246,6 +268,7 @@ if(!function_exists('oslo_load_styles')) {
 			wp_enqueue_style('oslo-team', get_template_directory_uri().'/styles/team.css');
 		}
 		wp_enqueue_style('oslo-responsive', get_template_directory_uri().'/styles/responsive.css');
+		wp_enqueue_style('ltlmtn', get_template_directory_uri().'/styles/ltlmtn.css');
 	}
 	add_action('wp_enqueue_scripts', 'oslo_load_styles');
 }

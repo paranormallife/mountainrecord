@@ -8,11 +8,16 @@
 */
 get_header();
 
-echo '<div style="background-color: #EEE; margin-bottom: 2rem; padding: 100px; text-align: center;">Header Placeholder</div>';
+echo oslo_child_switch_header();
+
+echo '<div class="zen-icons desktop"><img src="' . get_stylesheet_directory_uri() . '/assets/zen-icons_desktop.jpg" /></div>';
+echo '<div class="zen-icons mobile"><img src="' . get_stylesheet_directory_uri() . '/assets/zen-icons_mobile.jpg" /></div>';
 
 echo '<div class="container row post-tiles-container">';
 dynamic_sidebar( 'homepage-post-tiles' );
 echo '</div>';
+
+echo '<div class="calligraphy"><img src="' . get_stylesheet_directory_uri() . '/assets/calligraphy.jpg" /></div>';
 
 echo '<div class="homepage-posts-container">';
 if ( have_posts() ) {
@@ -43,6 +48,15 @@ the_posts_pagination( array(
 	'prev_text' => __( '&laquo; Previous Page', 'textdomain' ),
 	'next_text' => __( 'Next Page &raquo;', 'textdomain' ),
 ) );
+echo '</div>';
+echo '<div class="tag-cloud">';
+$cloud = array(
+	'smallest'                  => 12, 
+	'largest'                   => 18,
+	'unit'                      => 'px'
+); 
+echo '<h2>More Topics</h2>';
+wp_tag_cloud( $cloud );
 echo '</div>';
 
 get_footer();

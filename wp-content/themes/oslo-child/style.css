@@ -1,3 +1,200 @@
+/*
+ Theme Name:   Mountain Record 2019
+ Theme URI:    
+ Description:  Oslo Child Theme by LTL.MTN
+ Author:       Elliot Toman
+ Author URI:   https://asubtleweb.com
+ Template:     oslo
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         
+ Text Domain:  oslochild
+*/
+
+#osloChildNav {
+    display: block;
+}
+
+#osloChildNav #thmlvMobileMenuWrap,
+#osloChildNav #thmlvLogo,
+#osloChildNav #thmlvMenuWrap {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    width: 100%;
+}
+
+#thmlvLogo.oslo-child img {
+    max-height: none;
+}
+
+.header-brand {
+    align-items: flex-end;
+    display: flex;
+    margin: 1rem auto 0 auto;
+    max-width: 1080px;
+    width: calc( 100% - 2rem );
+}
+
+.header-brand #thmlvMenuWrap {
+    flex-basis: 100%;
+}
+
+#osloChildNav #thmlvLogo {
+    width: auto;
+}
+
+.header-brand #thmlvLogo img {
+    max-height: 150px;
+    padding-bottom: 0.25rem;
+}
+
+.thmlvLightLayout #osloChildNav #thmlvMenuWrap.oslo-child {
+    line-height: 1;
+    margin: 0 auto;
+    max-width: 1080px;
+    text-align: right;
+}
+
+.thmlvLightLayout .oslo-child #thmlvHeaderMenu {
+    height: auto;
+    line-height: 1;
+}
+
+.thmlvLightLayout .oslo-child #thmlvHeaderMenu a {
+    color: black;
+    line-height: 1;
+}
+
+#thmlvHeaderMenu ul#menu-top-menu-1 li.menu-item a {
+    cursor: pointer;
+    padding-bottom: 0.25rem;
+}
+
+#thmlvHeaderMenu>ul>li.menu-item-has-children>a:after {
+    margin-top: -0.6rem;
+}
+
+#thmlvHeaderMenu ul ul {
+    box-shadow: none;
+    padding: 0.5rem 0;
+}
+
+#thmlvHeaderMenu ul ul li {
+    border-bottom: none;
+}
+
+#thmlvHeader {
+    margin-bottom: 1rem;
+}
+
+.home-header {
+    max-height: calc( 100vh - 200px );
+    overflow: hidden;
+}
+
+#thmlvHeader,
+.home-header {
+    position: relative;
+    z-index: 2;
+}
+
+.home-header img {
+    height: auto;
+    width: 100%;
+}
+
+@media screen and ( max-width: 850px ) {
+    .header-brand {
+        display: block;
+    }
+    .header-brand #thmlvLogo img {
+        margin: 0 auto 1rem auto;
+    }
+    .thmlvLightLayout #osloChildNav #thmlvMenuWrap.oslo-child {
+        text-align: center;
+    }
+}
+
+
+#thmlvMenuIcon {
+    background-color: black;
+    height: auto;
+    position: fixed;
+    width: 100%;
+}
+
+#thmlvHamburger {
+    margin: 15px auto;
+}
+
+.tag-cloud {
+    margin: 2rem auto;
+    max-width: 1080px;
+    width: 80%;
+}
+
+.tag-cloud a {
+    display: inline-block;
+    margin: 0 0.25rem;
+}
+
+.tag-cloud a:nth-of-type(even) {
+    color: #666;
+}
+
+.tag-cloud h2 {
+    color: #ac1a2f;
+    font-family: 'Josefin Sans',serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.zen-icons,
+.calligraphy {
+    display: block;
+    margin: 1rem auto;
+    max-width: 1080px;
+    width: calc( 100% - 2rem );
+}
+
+.zen-icons img {
+    display: block;
+    margin: 0 auto;
+}
+
+.zen-icons.mobile {
+    display: none;
+}
+
+.calligraphy img {
+    margin: 0 auto 2rem auto;
+    max-width: 600px;
+}
+
+@media screen and ( max-width: 768px ) {
+    .header-brand {
+        margin-top: 60px;
+    }
+    .header-brand #thmlvLogo img {
+        max-height: 600px;
+        max-width: 100%;
+    }
+    #thmlvSectionTitle {
+        left: 1rem;
+        top: 1rem;
+        width: calc( 100% - 2rem );
+    }
+    .zen-icons.desktop {
+        display: none;
+    }
+    .zen-icons.mobile {
+        display: block;
+    }
+}
+
 .container.post-tiles-container,
 .homepage-posts-container {
     margin: 0 auto;
@@ -191,4 +388,15 @@ article.homepage .read-more {
         flex-basis: 100%;
         text-align: center;
     }
+}
+
+body.search-results.thmlvLightLayout #thmlvSectionTitle h3 {
+    color: black;
+}
+
+.sublogo {
+    display: block;
+    margin: 2rem auto;
+    max-width: 600px;
+    width: calc( 100% - 2rem );
 }

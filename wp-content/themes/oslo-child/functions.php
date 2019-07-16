@@ -12,6 +12,13 @@ function my_theme_enqueue_styles() {
     );
 }
 
+add_action( 'after_setup_theme', 'register_custom_nav_menus' );
+function register_custom_nav_menus() {
+	register_nav_menus( array(
+		'new_nav' => 'New Header Navigation'
+	) );
+}
+
 // Header override
 if(!function_exists('oslo_child_switch_header')) {
 	function oslo_child_switch_header($id = NULL) {
@@ -56,19 +63,22 @@ if(!function_exists('oslo_child_switch_header')) {
         }
         $output .= '<div id="osloChildNav">';
 		$output .= '<div id="thmlvMobileMenuWrap" class="oslo-child"><div id="thmlvMobileMenuScroll">';
-		$output .= wp_nav_menu(array('theme_location' => 'header-menu', 'sort_column' => 'menu_order', 'container'=> 'nav', 'fallback_cb' => false, 'depth' => 3, 'echo' => false));
+		$output .= wp_nav_menu(array('theme_location' => 'new_nav', 'sort_column' => 'menu_order', 'container'=> 'nav', 'fallback_cb' => false, 'depth' => 3, 'echo' => false));
         $output .= '</div></div>';
         $output .= '<div class="header-brand">';
 		$output .= '<div id="thmlvLogo" class="oslo-child logo"><h1>';
 		$output .= oslo_switch_logo($id, $lightLogo, $darkLogo);
         $output .= '</h1></div>';
 		$output .= '<div id="thmlvMenuWrap" class="'.$menuType.' oslo-child">';
-		$output .= wp_nav_menu(array('theme_location' => 'header-menu', 'container_id' => 'thmlvHeaderMenu', 'sort_column' => 'menu_order', 'container'=> 'nav', 'fallback_cb' => false, 'depth' => 3, 'echo' => false, 'walker' => $walker));
+		$output .= wp_nav_menu(array('theme_location' => 'new_nav', 'container_id' => 'thmlvHeaderMenu', 'sort_column' => 'menu_order', 'container'=> 'nav', 'fallback_cb' => false, 'depth' => 3, 'echo' => false, 'walker' => $walker));
         $output .= '<span id="thmlvMenuIcon"><span id="thmlvHamburger"><span></span><span></span><span></span><span></span></span></span></div>';
         $output .= '</div><!-- END #osloChildNav -->';
         $output .= '</div><!-- END .header-brand -->';
         if( is_home() ) {
-            $output .= '<div class="home-header"><img src="' . get_header_image() . '" /></div>';
+			$output .= '<div class="home-header">';
+			$output .= 		'<div class="site-title"><h2><span>' . get_bloginfo('description') . '</span></h2></div>';
+			$output .= 		'<img class="home-hero" src="' . get_header_image() . '" />';
+			$output .= '</div>';
         }
 		if(!is_page_template('thmlv-page-portfolio.php') && $type != 'none' && !is_post_type_archive()) {
 			$output .= '<header id="thmlvHeader" class="'.$class.'" data-height-value="'.$height.'">';
@@ -88,3 +98,32 @@ if(!function_exists('oslo_child_switch_header')) {
 		echo $output;
 	}
 }
+
+function oslo_child_slug_widgets_init() {
+	if(function_exists('register_sidebar')) {
+	
+		register_sidebar(array(
+			'name' => 'Homepage Post Tiles',
+			'id' => 'homepage-post-tiles',
+			'description'   => esc_html__('Tiled Feature of Selected Posts on Homepage', 'oslo'),
+			'class' => '',
+			'before_widget' => '<div id="post-tiles">',
+			'after_widget' => '</div>',
+			'before_title' => '<h2>',
+			'after_title' => '</h2>',
+		));
+	
+		register_sidebar(array(
+			'name' => 'Homepage Featured Posts',
+			'id' => 'homepage-featured-posts',
+			'description'   => esc_html__('Columns of Featured Posts on Homepage', 'oslo'),
+			'class' => '',
+			'before_widget' => '<div id="homepage-featured-posts">',
+			'after_widget' => '</div>',
+			'before_title' => '<h2 style="display: none;">',
+			'after_title' => '</h2>',
+		));
+	}
+}
+
+add_action('widgets_init', 'oslo_child_slug_widgets_init');

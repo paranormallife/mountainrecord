@@ -51,9 +51,10 @@ the_posts_pagination( array(
 echo '</div>';
 echo '<div class="tag-cloud">';
 $cloud = array(
-	'smallest'                  => 12, 
-	'largest'                   => 18,
-	'unit'                      => 'px'
+	'smallest' => 12, 
+	'largest'  => 24,
+    'unit'     => 'px',
+    'exclude'  => '48, 37, 18, 39, 50, 31, 23, 14, 45, 54, 65, 57, 27, 21, 35, 47, 66, 24, 15, 41, 53, 64'
 ); 
 echo '<h2>More Topics</h2>';
 wp_tag_cloud( $cloud );

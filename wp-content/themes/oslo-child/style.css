@@ -47,7 +47,7 @@
 }
 
 .header-brand #thmlvLogo img {
-    max-height: 150px;
+    max-width: 300px;
     padding-bottom: 0.25rem;
 }
 
@@ -103,10 +103,38 @@
 
 .home-header img {
     height: auto;
+    position: relative;
     width: 100%;
+    z-index: 2;
 }
 
-@media screen and ( max-width: 850px ) {
+.site-title {
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 1rem;
+    width: 100%;
+    z-index: 3;
+}
+
+.site-title h2 {
+    color: black;
+    display: block;
+    font-family: 'Josefin Sans',serif;
+    font-size: 1rem;
+    font-variant: none;
+    margin: 0 auto;
+    max-width: 1080px;
+    text-transform: none;
+    width: calc( 100% - 2rem );
+}
+
+.site-title h2 span {
+    display: block;
+    max-width: 300px;
+}
+
+@media screen and ( max-width: 950px ) {
     .header-brand {
         display: block;
     }
@@ -115,6 +143,13 @@
     }
     .thmlvLightLayout #osloChildNav #thmlvMenuWrap.oslo-child {
         text-align: center;
+    }
+    .site-title {
+        margin-bottom: 1rem;
+        position: static;
+    }
+    .site-title h2 span {
+        max-width: 100%;
     }
 }
 
@@ -217,7 +252,9 @@ body.paged .post-tiles-container {
 }
 
 .post-tiles h2 {
-    margin: 0;
+    margin: 1rem auto;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .post-tiles ul {

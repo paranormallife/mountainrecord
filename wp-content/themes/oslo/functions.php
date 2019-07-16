@@ -167,28 +167,6 @@ function oslo_slug_widgets_init() {
 			'before_title' => '<h4 class="thmlvWidgetTitle">',
 			'after_title' => '</h4>',
 		));
-	
-		register_sidebar(array(
-			'name' => 'Homepage Post Tiles',
-			'id' => 'homepage-post-tiles',
-			'description'   => esc_html__('Tiled Feature of Selected Posts on Homepage', 'oslo'),
-			'class' => '',
-			'before_widget' => '<div id="post-tiles">',
-			'after_widget' => '</div>',
-			'before_title' => '<h4 style="display: none;">',
-			'after_title' => '</h4>',
-		));
-	
-		register_sidebar(array(
-			'name' => 'Homepage Featured Posts',
-			'id' => 'homepage-featured-posts',
-			'description'   => esc_html__('Columns of Featured Posts on Homepage', 'oslo'),
-			'class' => '',
-			'before_widget' => '<div id="homepage-featured-posts">',
-			'after_widget' => '</div>',
-			'before_title' => '<h4 style="display: none;">',
-			'after_title' => '</h4>',
-		));
 	}
 }
 add_action('widgets_init', 'oslo_slug_widgets_init');

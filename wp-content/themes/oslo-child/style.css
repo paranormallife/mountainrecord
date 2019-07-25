@@ -43,6 +43,26 @@
     flex-basis: 100%;
 }
 
+.home-header-wrap .home-nav-wrap {
+    position: absolute;
+    top: 1rem;
+    width: 100%;
+    z-index: 3;
+}
+
+.home-header:after {
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
+    content: ' ';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
 #osloChildNav #thmlvLogo {
     width: auto;
 }
@@ -90,6 +110,10 @@
 
 #thmlvHeader {
     margin-bottom: 1rem;
+}
+
+.home-header-wrap {
+    position: relative;
 }
 
 .home-header {

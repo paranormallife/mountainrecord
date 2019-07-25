@@ -64,24 +64,31 @@ if(!function_exists('oslo_child_switch_header')) {
         $output .= '<div id="osloChildNav">';
 		$output .= '<div id="thmlvMobileMenuWrap" class="oslo-child"><div id="thmlvMobileMenuScroll">';
 		$output .= wp_nav_menu(array('theme_location' => 'new_nav', 'sort_column' => 'menu_order', 'container'=> 'nav', 'fallback_cb' => false, 'depth' => 3, 'echo' => false));
-        $output .= '</div></div>';
-        $output .= '<div class="header-brand">';
-		$output .= '<div id="thmlvLogo" class="oslo-child logo"><h1>';
-		$output .= oslo_switch_logo($id, $lightLogo, $darkLogo);
-		$output .= '</h1></div>';
-		$output .= '<div class="nav-wrap">';
-		$output .= '<div class="site-title"><h2><span>' . get_bloginfo('description') . '</span></h2></div>';
-		$output .= '<div id="thmlvMenuWrap" class="'.$menuType.' oslo-child">';
-		$output .= wp_nav_menu(array('theme_location' => 'new_nav', 'container_id' => 'thmlvHeaderMenu', 'sort_column' => 'menu_order', 'container'=> 'nav', 'fallback_cb' => false, 'depth' => 3, 'echo' => false, 'walker' => $walker));
-		$output .= '<span id="thmlvMenuIcon"><span id="thmlvHamburger"><span></span><span></span><span></span><span></span></span></span></div>';
-		$output .= '</div><!-- END .nav-wrap -->';
-        $output .= '</div><!-- END #osloChildNav -->';
-        $output .= '</div><!-- END .header-brand -->';
-        if( is_home() ) {
+		$output .= '</div></div>';
+		if( is_home() ) {
+			$output .= '<div class="home-header-wrap">';
 			$output .= '<div class="home-header">';
 			$output .= 		'<img class="home-hero" src="' . get_header_image() . '" />';
 			$output .= '</div>';
-        }
+			$output .= '<div class="home-nav-wrap">';
+		}
+		$output .= '<div class="header-brand">';
+		$output .= '<div id="thmlvLogo" class="oslo-child logo"><h1>';
+		if( is_home() ) {
+			$output .= '<img src="' . get_stylesheet_directory_uri() . '/assets/logo-home.png" />';
+		} else {
+			$output .= oslo_switch_logo($id, $lightLogo, $darkLogo);
+		}
+		$output .= '</h1></div>';
+		$output .= '<div id="thmlvMenuWrap" class="'.$menuType.' oslo-child">';
+		$output .= wp_nav_menu(array('theme_location' => 'new_nav', 'container_id' => 'thmlvHeaderMenu', 'sort_column' => 'menu_order', 'container'=> 'nav', 'fallback_cb' => false, 'depth' => 3, 'echo' => false, 'walker' => $walker));
+		$output .= '<span id="thmlvMenuIcon"><span id="thmlvHamburger"><span></span><span></span><span></span><span></span></span></span></div>';
+		$output .= '</div><!-- END #osloChildNav -->';
+		$output .= '</div><!-- END .header-brand -->';
+		if( is_home() ) {
+			$output .= '</div><!-- END .home-nav-wrap -->';
+			$output .= '</div><!-- END .home-header-wrap -->';
+		}
 		if(!is_page_template('thmlv-page-portfolio.php') && $type != 'none' && !is_post_type_archive()) {
 			$output .= '<header id="thmlvHeader" class="'.$class.'" data-height-value="'.$height.'">';
 			if($hideTitle != 'on' && !is_page_template('thmlv-page-portfolio.php')) {

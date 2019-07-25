@@ -59,7 +59,8 @@
     text-align: right;
 }
 
-.thmlvLightLayout .oslo-child #thmlvHeaderMenu {
+.thmlvLightLayout .oslo-child #thmlvHeaderMenu,
+.thmlvDarkLayout .oslo-child #thmlvHeaderMenu {
     height: auto;
     line-height: 1;
 }

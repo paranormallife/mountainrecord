@@ -68,15 +68,17 @@ if(!function_exists('oslo_child_switch_header')) {
         $output .= '<div class="header-brand">';
 		$output .= '<div id="thmlvLogo" class="oslo-child logo"><h1>';
 		$output .= oslo_switch_logo($id, $lightLogo, $darkLogo);
-        $output .= '</h1></div>';
+		$output .= '</h1></div>';
+		$output .= '<div class="nav-wrap">';
+		$output .= '<div class="site-title"><h2><span>' . get_bloginfo('description') . '</span></h2></div>';
 		$output .= '<div id="thmlvMenuWrap" class="'.$menuType.' oslo-child">';
 		$output .= wp_nav_menu(array('theme_location' => 'new_nav', 'container_id' => 'thmlvHeaderMenu', 'sort_column' => 'menu_order', 'container'=> 'nav', 'fallback_cb' => false, 'depth' => 3, 'echo' => false, 'walker' => $walker));
-        $output .= '<span id="thmlvMenuIcon"><span id="thmlvHamburger"><span></span><span></span><span></span><span></span></span></span></div>';
+		$output .= '<span id="thmlvMenuIcon"><span id="thmlvHamburger"><span></span><span></span><span></span><span></span></span></span></div>';
+		$output .= '</div><!-- END .nav-wrap -->';
         $output .= '</div><!-- END #osloChildNav -->';
         $output .= '</div><!-- END .header-brand -->';
         if( is_home() ) {
 			$output .= '<div class="home-header">';
-			$output .= 		'<div class="site-title"><h2><span>' . get_bloginfo('description') . '</span></h2></div>';
 			$output .= 		'<img class="home-hero" src="' . get_header_image() . '" />';
 			$output .= '</div>';
         }

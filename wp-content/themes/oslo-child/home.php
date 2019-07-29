@@ -10,9 +10,6 @@ get_header();
 
 echo oslo_child_switch_header();
 
-echo '<div class="zen-icons desktop"><img src="' . get_stylesheet_directory_uri() . '/assets/zen-icons_desktop.jpg" /></div>';
-echo '<div class="zen-icons mobile"><img src="' . get_stylesheet_directory_uri() . '/assets/zen-icons_mobile.jpg" /></div>';
-
 echo '<div class="container row post-tiles-container">';
 dynamic_sidebar( 'homepage-post-tiles' );
 echo '</div>';

@@ -36,7 +36,7 @@ if ( have_posts() ) {
                     echo '</a></h3>';
                     echo '<div class="timestamp">' . get_the_time( 'F j, Y', $post->ID ) . '</div>';
                     echo '<div class="excerpt">';
-                        the_excerpt();
+                    echo    wp_trim_words( get_the_content(), 100, '...' );
                     echo '</div>';
                     echo '<a href="' . get_the_permalink() . '" class="read-more">Read More &raquo;</a>';
                 echo '</div>';

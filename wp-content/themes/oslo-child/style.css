@@ -12,6 +12,8 @@
  Text Domain:  oslochild
 */
 
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap');
+
 #osloChildNav {
     display: block;
 }
@@ -24,6 +26,10 @@
     padding: 0;
     top: 0;
     width: 100%;
+}
+
+#osloChildNav #thmlvMobileMenuWrap {
+    z-index: 1;
 }
 
 #thmlvLogo.oslo-child img {
@@ -48,19 +54,6 @@
     top: 1rem;
     width: 100%;
     z-index: 3;
-}
-
-.home-header:after {
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
-    content: ' ';
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 2;
 }
 
 #osloChildNav #thmlvLogo {
@@ -127,6 +120,19 @@
     z-index: 2;
 }
 
+.home-header:before {
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0) 100%);
+    content: ' ';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+
 .home-header img {
     height: auto;
     position: relative;
@@ -135,7 +141,7 @@
 }
 
 .home-header:after {
-    background-image: url(assets/mro-chop-white.png);
+    background-image: url(assets/mro-chop-white.svg);
     background-repeat: no-repeat;
     background-size: contain;
     bottom: 2rem;
@@ -146,6 +152,7 @@
     right: 2rem;
     top: auto;
     width: 50px;
+    z-index: 3;
 }
 
 .site-title h2 {
@@ -176,6 +183,7 @@
     height: auto;
     position: fixed;
     width: 100%;
+    z-index: 10;
 }
 
 #thmlvHamburger {
@@ -230,6 +238,9 @@
     .header-brand {
         margin-top: 60px;
     }
+    .home-header {
+        margin-top: 3rem;
+    }    
     .header-brand #thmlvLogo img {
         max-height: 600px;
         max-width: 100%;
@@ -369,6 +380,10 @@ article.homepage:nth-of-type(even) .image {
 
 article.homepage .image img {
     display: none;
+}
+
+.timestamp {
+    font-weight: 700;
 }
 
 article.homepage h3,

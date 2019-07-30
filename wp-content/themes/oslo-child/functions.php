@@ -75,7 +75,7 @@ if(!function_exists('oslo_child_switch_header')) {
 		$output .= '<div class="header-brand">';
 		$output .= '<div id="thmlvLogo" class="oslo-child logo"><h1>';
 		if( is_home() ) {
-			$output .= '<img src="' . get_stylesheet_directory_uri() . '/assets/logo-home.png" />';
+			$output .= '<img src="' . get_stylesheet_directory_uri() . '/assets/logo-home-2.png" />';
 		} else {
 			$output .= oslo_switch_logo($id, $lightLogo, $darkLogo);
 		}

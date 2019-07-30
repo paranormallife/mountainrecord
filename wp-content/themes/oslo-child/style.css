@@ -457,6 +457,15 @@ article.homepage .read-more {
         flex-basis: 100%;
         text-align: center;
     }
+    .home .header-brand {
+        margin-top: 0;
+    }
+    .header-brand #thmlvLogo img {
+        max-width: 100%;
+    }
+    .home-header:after {
+        display: none;
+    }
 }
 
 body.search-results.thmlvLightLayout #thmlvSectionTitle h3 {
@@ -468,4 +477,8 @@ body.search-results.thmlvLightLayout #thmlvSectionTitle h3 {
     margin: 2rem auto;
     max-width: 600px;
     width: calc( 100% - 2rem );
+}
+
+.thmlvDarkLayout #thmlvHamburger span {
+    background-color: #FFFF;
 }

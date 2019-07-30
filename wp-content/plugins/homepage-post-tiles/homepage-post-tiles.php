@@ -127,6 +127,7 @@ class Homepage_Post_Tiles extends WP_Widget {
 								<h2>'. get_the_title($select) .'</h2>
 								<div class="timestamp">' . get_the_time( 'F j, Y', $select ) . '</div>
 								<div class="excerpt">' . get_the_excerpt($select) . '</div>
+								<div class="readmore">Read More &raquo;</div>
 							</div>
 							</a>
 						</li>';
@@ -138,6 +139,7 @@ class Homepage_Post_Tiles extends WP_Widget {
 							<div class="meta">
 								<h2>'. get_the_title($select2) .'</h2>
 								<div class="timestamp">' . get_the_time( 'F j, Y', $select2 ) . '</div>
+								<div class="readmore">Read More &raquo;</div>
 							</div>
 							</a>
 						</li>';
@@ -149,6 +151,7 @@ class Homepage_Post_Tiles extends WP_Widget {
 							<div class="meta">
 								<h2>'. get_the_title($select3) .'</h2>
 								<div class="timestamp">' . get_the_time( 'F j, Y', $select3 ) . '</div>
+								<div class="readmore">Read More &raquo;</div>
 							</div>
 							</a>
 						</li>';
@@ -160,6 +163,7 @@ class Homepage_Post_Tiles extends WP_Widget {
 							<div class="meta">
 								<h2>'. get_the_title($select4) .'</h2>
 								<div class="timestamp">' . get_the_time( 'F j, Y', $select4 ) . '</div>
+								<div class="readmore">Read More &raquo;</div>
 							</div>
 							</a>
 						</li>';

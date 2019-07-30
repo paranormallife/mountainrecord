@@ -332,6 +332,15 @@ body.paged .post-tiles-container {
     transition: all 250ms linear 0s;
 }
 
+.post-tiles .readmore {
+    color: #ac1a2f;
+    margin-top: 1rem;
+}
+
+.post-tiles-title {
+    display: none;
+}
+
 article.homepage {
     align-items: center;
     display: flex;
@@ -461,7 +470,7 @@ article.homepage .read-more {
         margin-top: 0;
     }
     .header-brand #thmlvLogo img {
-        max-width: 100%;
+        max-width: 60%;
     }
     .home-header:after {
         display: none;

@@ -8,9 +8,6 @@
 */
 if(!is_page_template('thmlv-page-no-footer.php')) {
 ?>
-	<div class="sublogo">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/mr-sublogo.png" />
-	</div>
 	<footer id="thmlvFooter" class="<?php oslo_footer_layout(); ?>">
 		<div class="container row gutters">
 			<?php

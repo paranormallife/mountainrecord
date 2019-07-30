@@ -118,7 +118,7 @@ function oslo_child_slug_widgets_init() {
 			'class' => '',
 			'before_widget' => '<div id="post-tiles">',
 			'after_widget' => '</div>',
-			'before_title' => '<h2>',
+			'before_title' => '<h2 class="post-tiles-title">',
 			'after_title' => '</h2>',
 		));
 	

@@ -284,9 +284,14 @@ body.paged .post-tiles-container {
 }
 
 .post-tiles h2 {
+    font-size: 1.5rem;
     margin: 1rem auto;
     text-align: center;
     text-transform: uppercase;
+}
+
+.post-tiles li:first-of-type h2 {
+    font-size: 2rem;
 }
 
 .post-tiles ul {
@@ -303,6 +308,7 @@ body.paged .post-tiles-container {
     align-self: stretch;
     justify-self: stretch;
     height: 250px;
+    overflow: hidden;
     position: relative;
 }
 

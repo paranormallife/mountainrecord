@@ -467,6 +467,10 @@ article.homepage .read-more {
     .post-tiles a .meta .excerpt {
         display: none;
     }
+    .post-tiles li h2,
+    .post-tiles li:first-of-type h2 {
+        font-size: 1.5rem;
+    }
     .homepage-posts-container .nav-links {
         flex-wrap: wrap;
         font-size: 1rem;

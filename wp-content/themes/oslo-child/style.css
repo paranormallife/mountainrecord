@@ -347,10 +347,6 @@ body.paged .post-tiles-container {
     margin-top: 1rem;
 }
 
-.post-tiles-title {
-    display: none;
-}
-
 article.homepage {
     align-items: center;
     display: flex;

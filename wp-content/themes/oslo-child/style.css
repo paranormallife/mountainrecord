@@ -285,7 +285,7 @@ body.paged .post-tiles-container {
 
 .post-tiles h2 {
     font-size: 1.5rem;
-    margin: 1rem auto;
+    margin: 1rem auto 2rem auto;
     text-align: center;
     text-transform: uppercase;
 }
